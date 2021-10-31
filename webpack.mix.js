@@ -1,4 +1,4 @@
-const mix = require('laravel-mix');
+const mix = require("laravel-mix");
 
 /*
  |--------------------------------------------------------------------------
@@ -11,7 +11,23 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+mix.scripts(
+    [
+        "resources/js/jquery.min.js",
+        "resources/js/bootstrap.min.js",
+        "resources/js/jquery-ui.min.js",
+        "resources/js/snackbar.min.js",
+        "resources/js/jquery.multiselect.js",
+        "resources/js/app.js",
+    ],
+    "public/js/app.js"
+).styles(
+    [
+        "resources/css/bootstrap.min.css",
+        "resources/css/jquery-ui.min.css",
+        "resources/css/snackbar.min.css",
+        "resources/css/jquery.multiselect.css",
+        "resources/css/app.css",
+    ],
+    "public/css/app.css"
+);
