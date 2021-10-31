@@ -25,5 +25,5 @@ return [
     "m" => "Male",
     "f" => "Female"
   ],
-  "ITEM_PER_PAGE" => 1
+  "ITEM_PER_PAGE" => 6
 ];

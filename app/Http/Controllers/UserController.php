@@ -73,11 +73,11 @@ class UserController extends Controller
       return $validate;
     }
     $validationRules = [
-      'minExpectedIncome' => 'required|numeric',
-      'maxExpectedIncome' => 'required|numeric',
-      'occupation' => 'required',
-      'familyType' => 'required',
-      'manglik' => 'required|integer|in:1,2'
+      'minExpectedIncome' => 'nullable|numeric',
+      'maxExpectedIncome' => 'nullable|numeric',
+      'occupation' => 'nullable',
+      'familyType' => 'nullable',
+      'manglik' => 'nullable|integer|in:1,2'
     ];
     $validate = General::validation($params, $validationRules);
     if ($validate['flag'] != 1) {

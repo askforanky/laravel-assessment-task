@@ -121,6 +121,7 @@ class User extends Model implements Authenticatable
             $usersData = $usersData->whereIn("familyType", $familyType);
             $usersData = $usersData->where("manglik", $manglik);
             $usersData = $usersData->where("id", "<>", $user_id);
+            $usersData = $usersData->where("gender", "<>", Auth::guard('user')->user()->gender);
 
             $itemPerPage = config('constant.ITEM_PER_PAGE');
             $currentPage = $params['currentPage'];
